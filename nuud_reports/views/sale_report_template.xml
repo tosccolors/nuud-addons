@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+                Sale Report
+    -->
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_description']" position="after">
+          <th name="th_ean" class="text-start">EAN</th>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="after">
+          <td name="td_name"><span t-field="line.product_id.barcode"/> </td>
+        </xpath>
+    </template>
+
+</odoo>
