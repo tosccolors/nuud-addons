@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+                Invoice Report
+    -->
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//th[@name='th_description']" position="after">
+          <th name="th_ean" class="text-start">EAN</th>
+        </xpath>
+        <xpath expr="//td[@name='account_invoice_line_name']" position="after">
+          <td name="td_name"><span t-field="line.product_id.barcode"/> </td>
+        </xpath>
+        <xpath expr="//div[@name='payment_term']" position="before">
+          <br/>
+        </xpath>
+    </template>
+
+</odoo>
