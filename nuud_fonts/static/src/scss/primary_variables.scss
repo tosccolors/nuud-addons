@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: 'BrownStd Bold';
+    src: url('/nuud_font/static/src/fonts/BrownStd-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BrownStd BoldItalic';
+    src: url('/nuud_font/static/src/fonts/BrownStd-BoldItalic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BrownStd Light';
+    src: url('/nuud_font/static/src/fonts/BrownStd-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BrownStd LightItalic';
+    src: url('/nuud_font/static/src/fonts/BrownStd-LightItalic.otf') format('truetype');
+}
+
+
+
+$o-theme-font-configs: map-merge($o-theme-font-configs, (
+    'BrownStd Bold': (
+        'family': ('BrownStdBold'),
+    ),
+    'BrownStd BoldItalic': (
+        'family': ('BrownStd BoldItalic'),
+    ),
+    'BrownStd Light': (
+        'family': ('BrownStd Light'),
+    ),
+    'BrownStd LightItalic': (
+        'family': ('BrownStd LightItalic'),
+    ),
+));
